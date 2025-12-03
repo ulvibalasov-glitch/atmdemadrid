@@ -1287,10 +1287,17 @@ body {
     
     /* Ensure text wraps properly on mobile - prevent text cutoff */
     h1, h2, h3, h4, h5, h6 {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
+        word-break: keep-all;
+        white-space: normal;
+        overflow-wrap: normal;
         max-width: 100%;
+    }
+    
+    /* Prevent word breaking in titles */
+    .section-title, .shop-section-title, .trophies-grid-title {
+        word-break: keep-all;
+        white-space: normal;
+        overflow-wrap: normal;
     }
     
     p, span, a, li, div {
@@ -1532,8 +1539,12 @@ body {
     }
     
     .shop-section-title {
-        font-size: 26px;
+        font-size: 22px;
         margin-bottom: 30px;
+        word-break: keep-all;
+        white-space: normal;
+        overflow-wrap: normal;
+        line-height: 1.2;
     }
     
     .products-carousel {
@@ -1618,10 +1629,28 @@ body {
     }
     
     .section-title {
-        font-size: 32px;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        font-size: 26px;
+        word-break: keep-all;
+        white-space: normal;
+        overflow-wrap: normal;
         max-width: 100%;
+        line-height: 1.2;
+    }
+    
+    .shop-section-title {
+        font-size: 26px;
+        word-break: keep-all;
+        white-space: normal;
+        overflow-wrap: normal;
+        line-height: 1.2;
+    }
+    
+    .trophies-grid-title {
+        font-size: 26px;
+        word-break: keep-all;
+        white-space: normal;
+        overflow-wrap: normal;
+        line-height: 1.2;
     }
     
     .vive-la-pasion span {
@@ -1729,14 +1758,28 @@ body {
     }
     
     .section-title {
-        font-size: 24px;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        font-size: 20px;
+        word-break: keep-all;
+        white-space: normal;
+        overflow-wrap: normal;
         max-width: 100%;
+        line-height: 1.2;
+    }
+    
+    .shop-section-title {
+        font-size: 20px;
+        word-break: keep-all;
+        white-space: normal;
+        overflow-wrap: normal;
+        line-height: 1.2;
     }
     
     .trophies-grid-title {
-        font-size: 24px;
+        font-size: 20px;
+        word-break: keep-all;
+        white-space: normal;
+        overflow-wrap: normal;
+        line-height: 1.2;
     }
     
     .legends-hero h1 {
@@ -1902,6 +1945,9 @@ body {
     text-shadow: 0 0 20px rgba(26, 84, 144, 0.8);
     position: relative;
     z-index: 1;
+    word-break: keep-all;
+    white-space: normal;
+    overflow-wrap: normal;
 }
 
 .products-carousel {
@@ -2420,6 +2466,9 @@ body {
     font-family: serif;
     position: relative;
     z-index: 1;
+    word-break: keep-all;
+    white-space: normal;
+    overflow-wrap: normal;
 }
 
 .trophies-grid {
@@ -2781,11 +2830,15 @@ body {
     font-weight: 900;
     text-align: center;
     margin-bottom: 50px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    word-break: keep-all;
+    white-space: normal;
+    overflow-wrap: normal;
     max-width: 100%;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
     font-family: serif;
 }
+
+
+
