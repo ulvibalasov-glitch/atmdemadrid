@@ -6,6 +6,50 @@
     <meta name="description" content="Atletico de Madrid - Matchday Experience">
     <title>Matchday Experience - Atletico de Madrid</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Responsive Google Map Styles */
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Mobile Responsive - Smaller height on mobile */
+        @media (max-width: 768px) {
+            .map-container {
+                padding-bottom: 75%; /* Taller aspect ratio for mobile */
+            }
+            
+            .map-section h2.section-title {
+                font-size: 36px !important;
+            }
+        }
+        
+        /* Tablet Responsive */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .map-container {
+                padding-bottom: 60%;
+            }
+        }
+        
+        /* Ensure map section padding adjusts on mobile */
+        @media (max-width: 480px) {
+            .map-section {
+                padding: 60px 15px !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -155,6 +199,40 @@
         </div>
     </section>
 
+    <!-- Google Map Section -->
+    <section class="map-section" style="background: linear-gradient(135deg, #0d1b2a 0%, #1a1a2e 100%); padding: 100px 20px; position: relative;">
+        <div class="container">
+            <h2 class="section-title" style="color: #FFD700; font-size: 52px; font-weight: 900; margin-bottom: 20px; text-align: center; text-transform: uppercase; letter-spacing: 4px; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 0 4px 20px rgba(0, 0, 0, 0.8); font-family: serif;">
+                Visit Wanda Metropolitano
+            </h2>
+            <div style="width: 150px; height: 4px; background: linear-gradient(90deg, transparent, #FFD700, transparent); margin: 25px auto 50px; border-radius: 2px;"></div>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; text-align: center; margin-bottom: 40px; font-style: italic;">
+                Find your way to the stadium
+            </p>
+            
+            <!-- Responsive Google Map Container -->
+            <div class="map-container" style="border-radius: 20px; border: 4px solid rgba(255, 215, 0, 0.5); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 60px rgba(255, 215, 0, 0.2);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.5!2d-3.5997!3d40.4368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sWanda%20Metropolitano!5e0!3m2!1sen!2ses!4v1700000000000!5m2!1sen!2ses"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Wanda Metropolitano Stadium Location">
+                </iframe>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center; color: rgba(255,255,255,0.8); font-size: 16px;">
+                <p style="margin: 10px 0;">
+                    <strong style="color: #FFD700;">Address:</strong> Av. de Luis Aragonés, 4, 28022 Madrid, Spain
+                </p>
+                <p style="margin: 10px 0;">
+                    <strong style="color: #FFD700;">Metro:</strong> Estadio Metropolitano (Line 7)
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-app-banner">
@@ -240,4 +318,3 @@
     </footer>
 </body>
 </html>
-
